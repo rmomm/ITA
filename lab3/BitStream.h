@@ -2,6 +2,7 @@
 #include <fstream>
 #include <cstdint>
 #include <string>
+using namespace std;
 
 class BitStream {
 public:
@@ -10,7 +11,7 @@ public:
         Write
     };
 
-    BitStream(const std::string& filename, Mode mode);
+    BitStream(const string& filename, Mode mode);
     ~BitStream();
 
     void WriteBitSequence(const uint8_t* data, size_t bitCount);
@@ -19,7 +20,7 @@ public:
     void Close();
 
 private:
-    std::fstream file;
+    fstream file;
     Mode mode;
 
     uint8_t buffer;     
