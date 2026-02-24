@@ -2,7 +2,7 @@
 #include <stdexcept>
 
 BitStream::BitStream(const string& filename, Mode m)
-    : mode(m), buffer(0), bitPosition(0){
+    : mode(m), buffer(0), bitPosition(0) {
     if (mode == Write) {
         file.open(filename, ios::binary | ios::out);
     }
@@ -30,7 +30,7 @@ void BitStream::Flush() {
 void BitStream::Close() {
     if (file.is_open()) {
         if (mode == Write) {
-            Flush(); 
+            Flush();
         }
         file.close();
     }
