@@ -15,7 +15,7 @@ const uint32_t N_SIZE = 1 << 16;
 
 
 uint16_t hashPolynomial(const string& s, uint16_t k) {
-    uint32_t h = 1; 
+    uint32_t h = 0; 
 
     for (size_t i = 0; i < s.size(); i += 2) {
         uint16_t a1 = (uint8_t)s[i];
